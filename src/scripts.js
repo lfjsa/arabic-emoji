@@ -8,7 +8,7 @@
   * generic ajax thing
   */
   function getStuff (url, cb) {
-    var request = new XMLHttpRequest()
+    var request = new window.XMLHttpRequest()
     request.open('GET', url)
     request.onload = function () {
       cb(request.responseText)
