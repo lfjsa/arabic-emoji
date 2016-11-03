@@ -16,7 +16,7 @@
   "scripts": {
     "start": "npm run build:all && npm run watch:all",
     "clean": "rm -f dist/*",
-    "autoprefixer": "postcss -u autoprefixer -r dist/*",
+    "autoprefixer": "postcss -u autoprefixer -r dist/*.css",
     "lint": "eslint src/*.js",
     "uglify": "uglifyjs src/*.js -m -o dist/app.js && uglifyjs src/*.js -m -c -o dist/app.min.js",
     "serve": "browser-sync start --server --files \"dist/*.css, dist/*.js, **/*.html, !node_modules/**/*.html\"",
