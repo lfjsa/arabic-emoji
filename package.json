@@ -21,7 +21,9 @@
     "build:css": "cp src/*.css dist/ && npm run autoprefixer",
     "build:all": "mkdir -p dist/ && npm run build:css",
     "watch:css": "onchange \"src/*.css\" -- npm run build:css",
-    "watch:all": "npm-run-all -p serve watch:css"
+    "watch:all": "npm-run-all -p serve watch:css",
+    "build": "node build.js",
+    "dev": "node --inspect --debug-brk build.js"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
