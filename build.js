@@ -1,5 +1,10 @@
-console.log(createElement('div', ['one', 'two']))
+const emoticons = require('./src/emoticons.json')
 
-function createElement (element, classes = [], content) {
-  return `<div class="${classes}"></div>`
+emoticons.forEach(generateEmoticonItem)
+
+function generateEmoticonItem (emoticon) {
+  return `<li>
+    <h2>${emoticons.figure}</h2>
+    <span>${emoticons.text}</span>
+  </li>`
 }
